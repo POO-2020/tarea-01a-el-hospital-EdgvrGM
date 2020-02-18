@@ -1,4 +1,10 @@
-class Nombre {
+export default class Nombre {
+  /**
+   *
+   * @param {string} nombre
+   * @param {string} apellidoPaterno
+   * @param {string} apellidoMaterno
+   */
   constructor(nombre, apellidoPaterno, apellidoMaterno) {
     this.nombre = nombre;
     this.aP = apellidoPaterno;
@@ -14,6 +20,3 @@ class Nombre {
     return `${this.nombre.charAt(0)}.${this.aP.charAt(0)}.${this.aM.charAt(0)}`;
   }
 }
-
-let name1 = new Nombre("Edgar", "Gonzalez", "Montelongo");
-console.log(name1.getIniciales());
