@@ -10,21 +10,19 @@ class Tiempo {
     this.minutos = new Date();
   }
   getFormato12() {
-    let periodo = ["AM", "PM"];
+    let periodo 
     if (this.hora.getHours() < 12) {
-      periodo = [0];
+      periodo = "AM";
     } else {
-      periodo = [1];
+      periodo = "PM";
     }
-    Hora = this.hora.getHours() % 12;
+    let Hora = this.hora.getHours() % 12;
     if (Hora == 0) {
       Hora = 12;
     }
+    return `${Hora}:${this.minutos.getMinutes()} ${periodo}`
   }
   getFormato24() {
     return `${this.hora.getHours()}:${this.minutos.getMinutes()}`;
   }
 }
-
-let h = new Tiempo();
-console.log(h.getFormato24());
