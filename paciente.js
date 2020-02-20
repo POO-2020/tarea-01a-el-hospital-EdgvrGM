@@ -12,9 +12,8 @@ export default class Paciente {
     this.telefono = telefono;
   }
   getPerfil() {
-    return `
-      -${this.nombre.getNombreCompleto()}
-      -${this.fechaNacimiento.getFecha()}
-      -${this.telefono}`;
+    return `-${this.nombre.getNombreCompleto()}
+-${this.fechaNacimiento.getFecha()}
+-${this.telefono}`;
   }
 }

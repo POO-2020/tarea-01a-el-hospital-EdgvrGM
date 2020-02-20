@@ -2,6 +2,7 @@ import Tiempo from "./tiempo.js";
 import Nombre from "./nombre.js";
 import Fecha from "./fecha.js";
 import Paciente from "./paciente.js";
+import Doctor from "./doctor.js";
 
 class Main {
   constructor() {
@@ -9,6 +10,7 @@ class Main {
     this.nombre = new Nombre("Edgar", "Gonzalez", "Montelongo");
     this.fecha = new Fecha(20, 2, 2019);
     this.paciente = new Paciente(3131911815);
+    this.doctor = new Doctor("Neurocirujano", 3131369606, 87654321);
   }
   probarHora() {
     console.log(this.hora.getFormato12());
@@ -30,6 +32,9 @@ class Main {
   probarPaciente() {
     console.log(this.paciente.getPerfil());
   }
+  probarDoctor() {
+    console.log(this.doctor.getId());
+  }
 }
 
 let app = new Main();
@@ -37,3 +42,4 @@ app.probarHora();
 app.probarNombre();
 app.probarFecha();
 app.probarPaciente();
+app.probarDoctor();
