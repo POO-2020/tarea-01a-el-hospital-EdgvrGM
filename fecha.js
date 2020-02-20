@@ -1,5 +1,11 @@
 var global;
 export default class Fecha {
+  /**
+   *
+   * @param {number} dia
+   * @param {number} mes
+   * @param {number} año
+   */
   constructor(dia, mes, año) {
     this.fechas = new Date(año, mes - 1, dia);
     this.diasSemana = [

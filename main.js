@@ -1,12 +1,14 @@
 import Tiempo from "./tiempo.js";
 import Nombre from "./nombre.js";
 import Fecha from "./fecha.js";
+import Paciente from "./paciente.js";
 
 class Main {
   constructor() {
     this.hora = new Tiempo(8, 56, "pm");
     this.nombre = new Nombre("Edgar", "Gonzalez", "Montelongo");
     this.fecha = new Fecha(20, 2, 2019);
+    this.paciente = new Paciente(3131911815);
   }
   probarHora() {
     console.log(this.hora.getFormato12());
@@ -25,9 +27,13 @@ class Main {
     console.log(this.fecha.getDias());
     console.log(this.fecha.getDiaFecha());
   }
+  probarPaciente() {
+    console.log(this.paciente.getPerfil());
+  }
 }
 
 let app = new Main();
 app.probarHora();
 app.probarNombre();
 app.probarFecha();
+app.probarPaciente();
