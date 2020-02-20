@@ -1,4 +1,4 @@
-class Tiempo {
+export default class Tiempo {
   /**
    *
    * @param {number} hora

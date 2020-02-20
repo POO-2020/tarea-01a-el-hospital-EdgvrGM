@@ -1,5 +1,5 @@
 var global;
-class Fecha {
+export default class Fecha {
   constructor(dia, mes, año) {
     this.fechas = new Date(año, mes - 1, dia);
     this.diasSemana = [
@@ -25,7 +25,6 @@ class Fecha {
       "Noviembre",
       "Diciembre"
     ];
-    console.log("Objeto inicializado");
   }
   getAños() {
     let años;
