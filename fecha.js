@@ -7,7 +7,7 @@ export default class Fecha {
    * @param {number} año
    */
   constructor(dia, mes, año) {
-    this.fechas = new Date(año, mes - 1, dia);
+    this.fecha = new Date(año, mes - 1, dia);
     this.diasSemana = [
       "Domingo",
       "Lunes",
@@ -34,7 +34,7 @@ export default class Fecha {
   }
   getAños() {
     let años;
-    años = 2020 - this.fechas.getFullYear();
+    años = 2020 - this.fecha.getFullYear();
     global = años;
     return `${años}`;
   }
@@ -58,12 +58,12 @@ export default class Fecha {
   }
   getFecha() {
     let mesDelAño;
-    mesDelAño = this.años[this.fechas.getMonth()];
-    return `${this.fechas.getDate()}/${mesDelAño}/${this.fechas.getFullYear()}`;
+    mesDelAño = this.años[this.fecha.getMonth()];
+    return `${this.fecha.getDate()}/${mesDelAño}/${this.fecha.getFullYear()}`;
   }
   getDiaFecha() {
     let diaDeSemana;
-    diaDeSemana = this.diasSemana[this.fechas.getDay()];
+    diaDeSemana = this.diasSemana[this.fecha.getDay()];
     return `${diaDeSemana}`;
   }
 }

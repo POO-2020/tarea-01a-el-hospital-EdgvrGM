@@ -2,13 +2,15 @@ import Nombre from "./nombre.js";
 import Fecha from "./fecha.js";
 
 export default class Paciente {
-    /**
-     * 
-     * @param {number} telefono 
-     */
-  constructor(telefono) {
-    this.nombre = new Nombre("Bryan", "Guzman", "Covarrubias");
-    this.fechaNacimiento = new Fecha(16, 11, 2000);
+ /**
+  * 
+  * @param {string} nombre 
+  * @param {number} fecha 
+  * @param {number} telefono 
+  */
+  constructor(nombre, fecha, telefono) {
+    this.nombre = nombre
+    this.fechaNacimiento = fecha
     this.telefono = telefono;
   }
   getPerfil() {
